@@ -77,8 +77,7 @@ To evaluate the generalization of our reasoning model, we design a real-world ex
 ```shell
 conda create -n llama-factory python=3.11
 conda activate llama-factory
-# git clone -b embodied-reasoner https://github.com/iGangao/LLaMA-Factory.git
-git submodule update --remote
+git clone -b embodied-reasoner https://github.com/iGangao/LLaMA-Factory.git
 cd LLaMA-Factory
 pip install -e ".[torch,metrics]"
 pip install wandb accelerate deepspeed importlib-metadata
