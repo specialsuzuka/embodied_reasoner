@@ -1,4 +1,4 @@
-# <img src="./assets/embodied-reasoner-logo.png" height="30">Embodied-Reasoner 
+# <img src="./assets/embodied-reasoner-logo.png" height="50">Embodied-Reasoner 
 ✨This is the official implementation of paper 
 <a href="https://arxiv.org/abs/2503.xxxxx">Embodied-Reasoner: Synergizing Visual Search, Reasoning, and Action for Embodied Interactive Tasks</a>
 
@@ -68,7 +68,7 @@ Our contributions can be summarized as follows:
 
 > **Long CoT with Diverse Thinking Pattern:** analysis, spatial reasoning, reflection, planning, and verification. These coherent, image-text interleaved trajectories boost its spatial, temporal reasoning capabilities.
 <p align="center">
-    <img src="./assets/state_trans.jpg" height="300" style="display:inline-block;"/>
+    <img src="./assets/state_trans.jpg" height="350" style="display:inline-block;"/>
 <p>  
 
 > **Iterative Training Pipeline:** A three-stage iterative training pipeline that combines **imitation learning**, **self-exploration tunning**, and **self-correction tunning**.   
