@@ -1,4 +1,4 @@
-# Embodied-Reasoner
+# <img src="./assets/embodied-reasoner-logo.png" height="20">Embodied-Reasoner 
 ✨This is the official implementation of paper 
 <a href="https://arxiv.org/abs/2503.xxxxx">Embodied-Reasoner: Synergizing Visual Search, Reasoning, and Action for Embodied Interactive Tasks</a>
 
@@ -19,7 +19,7 @@
 - **2025.03:** Initial release.
 
 ## Contents
-- [Introduction](#introduction)
+- [Overview](#Overview)
 - [Performance](#preformance)
 - [Examples](#examples)
 - [Training](#training)
@@ -32,19 +32,33 @@
 - [Citation](#citation)
 - [License](#license)
 
-## Introduction
-In this paper, we present Embodied-Reasoner, a novel approach that extends deep-thinking capabilities to embodied interactive tasks. Our key insight is that effective embodied reasoning requires not just the ability to process multimodal inputs, but also to generate diverse thinking processes (analysis, planning, reflection) that adapt to different stages of an interaction.
+## Overview
+In this paper, we present **Embodied-Reasoner**, a multimodal embodied model that extends o1-style deep-reasoning capabilities to embodied interactive tasks. It can perform complex tasks in AI2THOR such as searching for hidden objects, manipulating and transporting items with several impressive features:
+- *Deep reasoning abilities*, including **analysis**, **spatial reasoning**, **reflection**, **planning**.
+- *Multimodal processing capabilities*, especially handling long sequences of interleaved image-text context
+- *Environmental interaction abilities*, enabling it to autonomously observe the environment, explore rooms, and find hidden objects
+- *Open-source models* released in 7B/2B sizes
+- *Open-source dataset*: 9.3k interleaved observation-reasoning-action trajectories, including 64K images and 8M thought tokens.
 
 <p align="center">
-    <img src="./assets/introduction.jpg"/>
+    <img src="./assets/fig0.png" height="500"/>
 <p>
 
+
+
 Our contributions can be summarized as follows:
-- **Data Engine:** To develop this capability, we develop a data engine that automatically synthesizes coherent **Observation-Thought-Action** trajectories enriched with diverse, embodied-specific thinking processes. e.g., **situational analysis**, **spatial reasoning**, **self-reflection**, **task planning**, and **double verification**. These coherent, image-text interleaved trajectories guide the model to learn how to plan and reason based on its interaction history and spatial layout, thereby boosting its spatial and temporal reasoning capabilities.
+- **Task and Trajectory Engine:** Automatically synthesizes coherent **Observation-Thought-Action** trajectories, spaning 107 diverse indoor scenes, e.g., kitchens and living rooms, and covers 2,100 interactive objects (e.g., eggs, laptops) and 2,600 containers (e.g., refrigerators, drawers), \textit{64K} a first-person perspective image from interaction and \textit{8M} thought tokens. 
 
-- **Iterative Training Pipeline:** We further introduce a three-stage iterative training pipeline for embodied model that combines **imitation**, **self-exploration**, and **self-correction**.Begins with imitation learning on synthesized trajectories to develop basic interaction skills Followed by rejection sampling tuning to enhance exploration abilities Concludes with reflection tuning to foster self-correction.
+- **Long CoT with Diverse Thinking Pattern**: **analysis**, **spatial reasoning**, **reflection**, **planning**, and **verification**. These coherent, image-text interleaved trajectories boost its spatial, temporal reasoning capabilities.
 
-- **Interactive Evaluation Framework:** We cultivate 809 test cases across 12 novel scenarios, which are different from training scenes. We manually design instructions and annotate corresponding key actions and final states: `<Instruction, Key Action, Final state >`. Notably, our test-set contains 25 carefully designed ultra long-horizon tasks, each involving four sub-tasks and 14 - 27 key actions.
+- **Iterative Training Pipeline:** A three-stage iterative training pipeline for embodied model that combines **imitation**, **self-exploration**, and **self-correction**.
+
+- **Interactive Evaluation Framework:** 809 test cases across 12 novel scenarios: `<Instruction, Key Action, Final state >`
+
+<!-- <p align="center">
+    <img src="./assets/introduction.jpg" height="500"/>
+<p> -->
+
 
 ## Performance
 We compare the performance of Embodied-Reasoner against advanced VLMs and visual reasoning models. 
@@ -56,14 +70,14 @@ We compare the performance of Embodied-Reasoner against advanced VLMs and visual
 <p>
 
 ## Examples
-### Simulator Example
+### Simulator Experiments
 Embodied-Reasoner exhibits spontaneous thinking behaviors, e.g., analyzing environmental states (#1,3), reflecting on missed details (#4), reasoning based on the latest observations (#5), and recalling cues for efficient planning (#9). These thoughts remain coherent and logically consistent despite spanning multiple rounds. In contrast, general VLMs lacking thinking abilities struggle with long-horizon interactive tasks and produce unreasonable actions, e.g., forget tasks or repetitive searching.
 
 <p align="center">
     <img src="./assets/example.jpg"/>
 <p>
 
-### Real-World Example
+### Real-World Experiments
 To evaluate the generalization of our reasoning model, we design a real-world experiment. Our model rules out the countertop and dining table after two explorations (steps 1,2), ultimately locating the coffee (#7) in the cabinet and placing it in the microwave for heating (#11). However, we observe that OpenAI o3-mini fails to formulate a reasonable plan, heading to the microwave first instead of searching for the coffee.
 
 <p align="center">
