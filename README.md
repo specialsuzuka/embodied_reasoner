@@ -2,18 +2,20 @@
 ✨This is the official implementation of paper 
 <a href="https://arxiv.org/abs/2503.xxxxx">Embodied-Reasoner: Synergizing Visual Search, Reasoning, and Action for Embodied Interactive Tasks</a>
 
-<div style="display: flex; align-items: center;">
-    <div style="flex: 0.3;">
-        <p>1. Embodied Interactive Task</p>
-        <p>2. Deep Reasoning Model</p>
-        <p>3. Multimodal Scene</p>
-    </div>
-    <div style="flex: 0.7;">
-        <p align="center">
-            <img src="./assets/embodied_reasoner.JPG" height="300"/>
-        </p>
-    </div>
-</div>
+<table>
+  <tr>
+    <td width="30%">
+      <p>1. Embodied Interactive Task</p>
+      <p>2. Deep Reasoning Model</p>
+      <p>3. Multimodal Scene</p>
+    </td>
+    <td width="70%">
+      <p align="center">
+        <img src="./assets/embodied_reasoner.JPG" height="300"/>
+      </p>
+    </td>
+  </tr>
+</table>
 
 <p align="center">
           🤗 <a href="https://huggingface.co/datasets/zwq2018/embodied_reasoner">Hugging Face</a>
