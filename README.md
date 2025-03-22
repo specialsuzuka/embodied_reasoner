@@ -7,7 +7,7 @@
 <p>
 
 <p align="center">
-          🤗 <a href="https://huggingface.co/Qwen">Hugging Face</a>
+          🤗 <a href="https://huggingface.co/datasets/zwq2018/embodied_reasoner">Hugging Face</a>
           &nbsp&nbsp | &nbsp&nbsp 🤖 <a href="https://modelscope.cn/organization/qwen">ModelScope</a>
           &nbsp&nbsp | &nbsp&nbsp 📑 <a href="https://arxiv.org/abs/2503.xxxxx">Arxiv</a> 
           &nbsp&nbsp | &nbsp&nbsp 📑 <a href="https://embodied-reasoner.github.io">WebPage</a> 
@@ -34,30 +34,38 @@
 
 ## Overview
 In this paper, we present **Embodied-Reasoner**, a multimodal embodied model that extends o1-style deep-reasoning capabilities to embodied interactive tasks. It can perform complex tasks in AI2THOR such as searching for hidden objects, manipulating and transporting items with several impressive features:
-- *Deep reasoning abilities*, including **analysis**, **spatial reasoning**, **reflection**, **planning**.
-- *Multimodal processing capabilities*, especially handling long sequences of interleaved image-text context
-- *Environmental interaction abilities*, enabling it to autonomously observe the environment, explore rooms, and find hidden objects
-- *Open-source models* released in 7B/2B sizes
-- *Open-source dataset*: 9.3k interleaved observation-reasoning-action trajectories, including 64K images and 8M thought tokens.
+- **Deep Reasoning** abilities, including **analysis**, **spatial reasoning**, **reflection**, **planning**.
+- **Interleaved Multimodal Processing** capabilities, especially handling long sequences of interleaved image-text context
+- **Environmental Interaction** abilities, enabling it to autonomously observe the environment, explore rooms, and find hidden objects
+- **Open-source Models** released in 7B/2B sizes
+- **Open-source Dataset** 🤗 <a href="https://huggingface.co/datasets/zwq2018/embodied_reasoner">Hugging Face</a>*: 9.3k interleaved observation-reasoning-action trajectories, including 64K images and 8M thought tokens.
 
 <p align="center">
-    <img src="./assets/fig0.png" height="500"/>
+    <img src="./assets/fig0.png" height="400"/>
 <p>
 
 
 
 Our contributions can be summarized as follows:
-- **Task and Trajectory Engine:** Automatically synthesizes coherent **Observation-Thought-Action** trajectories, spaning 107 diverse indoor scenes, e.g., kitchens and living rooms, and covers 2,100 interactive objects (e.g., eggs, laptops) and 2,600 containers (e.g., refrigerators, drawers), \textit{64K} a first-person perspective image from interaction and \textit{8M} thought tokens. 
 
-- **Long CoT with Diverse Thinking Pattern**: **analysis**, **spatial reasoning**, **reflection**, **planning**, and **verification**. These coherent, image-text interleaved trajectories boost its spatial, temporal reasoning capabilities.
+> **Task and Trajectory Engine:** Automatically synthesizes coherent **Observation-Thought-Action** trajectories, spaning 107 diverse indoor scenes, e.g., kitchens and living rooms, and covers 2,100 interactive objects (e.g., eggs, laptops) and 2,600 containers (e.g., refrigerators, drawers), *64K* a first-person perspective image from interaction and *8M* thought tokens. 
+<p align="center">
+    <img src="./assets/table.jpg" height="180" style="display:inline-block; margin-right:10px;"/>
+    <img src="./assets/state_trans.jpg" height="180" style="display:inline-block;"/>
+<p>
+> **Long CoT with Diverse Thinking Pattern**: **analysis**, **spatial reasoning**, **reflection**, **planning**, and **verification**. These coherent, image-text interleaved trajectories boost its spatial, temporal reasoning capabilities.
 
-- **Iterative Training Pipeline:** A three-stage iterative training pipeline for embodied model that combines **imitation**, **self-exploration**, and **self-correction**.
-
-- **Interactive Evaluation Framework:** 809 test cases across 12 novel scenarios: `<Instruction, Key Action, Final state >`
-
+> **Iterative Training Pipeline:** A three-stage iterative training pipeline that combines **imitation learning**, **self-exploration tunning**, and **self-correction tunning**.
 <!-- <p align="center">
-    <img src="./assets/introduction.jpg" height="500"/>
+    <img src="./assets/introduction.jpg" height="400"/>
 <p> -->
+> **Interactive Evaluation Framework: 809 test cases across 12 novel scenarios: `<Instruction, Key Action, Final state >`
+
+<p align="center">
+    <img src="./assets/dataset.jpg" height="370" style="display:inline-block; margin-right:10px;"/>
+    <img src="./assets/object.jpg" height="370" style="display:inline-block;"/>
+<p>
+
 
 
 ## Performance
@@ -81,7 +89,7 @@ Embodied-Reasoner exhibits spontaneous thinking behaviors, e.g., analyzing envir
 To evaluate the generalization of our reasoning model, we design a real-world experiment. Our model rules out the countertop and dining table after two explorations (steps 1,2), ultimately locating the coffee (#7) in the cabinet and placing it in the microwave for heating (#11). However, we observe that OpenAI o3-mini fails to formulate a reasonable plan, heading to the microwave first instead of searching for the coffee.
 
 <p align="center">
-    <img src="./assets/real_example.jpg"/>
+    <img src="./assets/real_example.jpg" height="400"/>
 <p>
 
 ## QuickStart
