@@ -5,9 +5,10 @@
 <table>
   <tr>
     <td width="30%">
-      <p>1. Embodied Interactive Task</p>
-      <p>2. Deep Reasoning Model</p>
-      <p>3. Multimodal Scene</p>
+      <p>1. 💫 Embodied Interactive Task</p>  
+      <p>2. 💫 Deep Reasoning Model</p>
+      <p>3. 💫 Multimodal Image-text Interleaved</p>
+      <p>4. 💫 Long-horizon Decision</p>
     </td>
     <td width="70%">
       <p align="center">
