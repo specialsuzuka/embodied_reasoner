@@ -14,11 +14,11 @@
 <br>
 </p>
 
-## News
+## News 🔥🔥
 
-- **2025.03:** Initial release.
+- **2025.03:** We release our paper and dataset.
 
-## Contents
+## Contents 🌳🌳
 - [Overview](#Overview)
 - [Performance](#preformance)
 - [Examples](#examples)
@@ -29,20 +29,26 @@
 - [Evaluation](#evaluation)
     - [Step 1. Install Requirements](#step-1-install-requirements-1)
     - [Step 2. Run Evaluation Scripts](#step-2-run-evaluation-scripts)
+- [Task and Trajectory Engine](#Overview)
 - [Citation](#citation)
 - [License](#license)
 
-## Overview
+## Overview 👉👉
 In this paper, we present **Embodied-Reasoner**, a multimodal embodied model that extends o1-style deep-reasoning capabilities to embodied interactive tasks. It can perform complex tasks in AI2THOR such as searching for hidden objects, manipulating and transporting items with several impressive features:
-- **Deep Reasoning** abilities, including **analysis**, **spatial reasoning**, **reflection**, **planning**.
-- **Interleaved Multimodal Processing** capabilities, especially handling long sequences of interleaved image-text context
-- **Environmental Interaction** abilities, enabling it to autonomously observe the environment, explore rooms, and find hidden objects
-- **Open-source Models** released in 7B/2B sizes
-- **Open-source Dataset** 🤗 <a href="https://huggingface.co/datasets/zwq2018/embodied_reasoner">Hugging Face</a>*: 9.3k interleaved observation-reasoning-action trajectories, including 64K images and 8M thought tokens.
-
-<p align="center">
-    <img src="./assets/fig0.png" height="400"/>
-<p>
+<div style="display: flex; align-items: center;">
+  <div style="flex: 1;">
+    <ul>
+      <li><strong>Deep Reasoning</strong> abilities, e.g., <strong>analysis</strong>, <strong>spatial reasoning</strong>, <strong>reflection</strong>, <strong>planning</strong>.</li>
+      <li><strong>Interleaved Multimodal Processing</strong> capabilities, especially handling long sequences of interleaved image-text context</li>
+      <li><strong>Environmental Interaction</strong> abilities, enabling it to autonomously observe the environment, explore rooms, and find hidden objects</li>
+      <li><strong>Open-source Models</strong> released in 7B/2B sizes</li>
+      <li><strong>Open-source Dataset</strong> 🤗 <a href="https://huggingface.co/datasets/zwq2018/embodied_reasoner">Hugging Face</a>: 9.3k interleaved observation-reasoning-action trajectories, including 64K images and 8M thought tokens.</li>
+    </ul>
+  </div>
+  <div style="flex: 1;">
+    <img src="./assets/fig0.png" height="300"/>
+  </div>
+</div>
 
 
 
@@ -51,14 +57,17 @@ Our contributions can be summarized as follows:
 > **Task and Trajectory Engine:** Automatically synthesizes coherent **Observation-Thought-Action** trajectories, spaning 107 diverse indoor scenes, e.g., kitchens and living rooms, and covers 2,100 interactive objects (e.g., eggs, laptops) and 2,600 containers (e.g., refrigerators, drawers), *64K* a first-person perspective image from interaction and *8M* thought tokens. 
 <p align="center">
     <img src="./assets/table.jpg" height="180" style="display:inline-block; margin-right:10px;"/>
-<p>
-> **Long CoT with Diverse Thinking Pattern**: **analysis**, **spatial reasoning**, **reflection**, **planning**, and **verification**. These coherent, image-text interleaved trajectories boost its spatial, temporal reasoning capabilities.
+<p>  
+
+> **Long CoT with Diverse Thinking Pattern:** analysis, spatial reasoning, reflection, planning, and verification. These coherent, image-text interleaved trajectories boost its spatial, temporal reasoning capabilities.
 <p align="center">
     <img src="./assets/state_trans.jpg" height="300" style="display:inline-block;"/>
-<p>
-> **Iterative Training Pipeline:** A three-stage iterative training pipeline that combines **imitation learning**, **self-exploration tunning**, and **self-correction tunning**.
+<p>  
 
-> **Interactive Evaluation Framework: 809 test cases across 12 novel scenarios: `<Instruction, Key Action, Final state >`
+> **Iterative Training Pipeline:** A three-stage iterative training pipeline that combines **imitation learning**, **self-exploration tunning**, and **self-correction tunning**.   
+
+
+> **Interactive Evaluation Framework:** 809 test cases across 12 novel scenarios: `<Instruction, Key Action, Final state >`
 
 <p align="center">
     <img src="./assets/dataset.jpg" height="370" style="display:inline-block; margin-right:10px;"/>
@@ -67,7 +76,7 @@ Our contributions can be summarized as follows:
 
 
 
-## Performance
+## Performance 🌿🌿
 We compare the performance of Embodied-Reasoner against advanced VLMs and visual reasoning models. 
 - Success Rate (%) measures whether a task is successfully completed. 
 - Search Efficiency (%) evaluates task efficiency—more steps indicate lower efficiency. 
@@ -76,7 +85,7 @@ We compare the performance of Embodied-Reasoner against advanced VLMs and visual
     <img src="./assets/performance.jpg"/>
 <p>
 
-## Examples
+## Examples 👀 👀
 ### Simulator Experiments
 Embodied-Reasoner exhibits spontaneous thinking behaviors, e.g., analyzing environmental states (#1,3), reflecting on missed details (#4), reasoning based on the latest observations (#5), and recalling cues for efficient planning (#9). These thoughts remain coherent and logically consistent despite spanning multiple rounds. In contrast, general VLMs lacking thinking abilities struggle with long-horizon interactive tasks and produce unreasonable actions, e.g., forget tasks or repetitive searching.
 
@@ -91,7 +100,7 @@ To evaluate the generalization of our reasoning model, we design a real-world ex
     <img src="./assets/real_example.jpg" height="400"/>
 <p>
 
-## QuickStart
+## QuickStart 🎯🎯
 ### Training
 
 #### Step 1. Install Requirements
@@ -129,7 +138,7 @@ Run the evaluation scripts:
 bash scripts/eval.sh
 ```
 
-
+## Task and Trajectory Engine ⛲⛲
 ## Citation
 
 If you find our work helpful, feel free to give us a cite.
