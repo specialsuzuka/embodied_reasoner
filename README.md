@@ -1,4 +1,4 @@
-# <img src="./assets/embodied-reasoner-logo.png" height="20">Embodied-Reasoner 
+# <img src="./assets/embodied-reasoner-logo.png" height="30">Embodied-Reasoner 
 ✨This is the official implementation of paper 
 <a href="https://arxiv.org/abs/2503.xxxxx">Embodied-Reasoner: Synergizing Visual Search, Reasoning, and Action for Embodied Interactive Tasks</a>
 
@@ -33,26 +33,33 @@
 - [Citation](#citation)
 - [License](#license)
 
-## Overview 👉👉
+## Overview 🦾🦾
 In this paper, we present **Embodied-Reasoner**, a multimodal embodied model that extends o1-style deep-reasoning capabilities to embodied interactive tasks. It can perform complex tasks in AI2THOR such as searching for hidden objects, manipulating and transporting items with several impressive features:
 <div style="display: flex; align-items: center;">
-  <div style="flex: 1;">
+  <div style="flex: 0.33;">
     <ul>
-      <li><strong>Deep Reasoning</strong> abilities, e.g., <strong>analysis</strong>, <strong>spatial reasoning</strong>, <strong>reflection</strong>, <strong>planning</strong>.</li>
-      <li><strong>Interleaved Multimodal Processing</strong> capabilities, especially handling long sequences of interleaved image-text context</li>
-      <li><strong>Environmental Interaction</strong> abilities, enabling it to autonomously observe the environment, explore rooms, and find hidden objects</li>
-      <li><strong>Open-source Models</strong> released in 7B/2B sizes</li>
-      <li><strong>Open-source Dataset</strong> 🤗 <a href="https://huggingface.co/datasets/zwq2018/embodied_reasoner">Hugging Face</a>: 9.3k interleaved observation-reasoning-action trajectories, including 64K images and 8M thought tokens.</li>
+      <li><strong>👉 Deep Reasoning</strong> abilities, e.g., <strong>analysis</strong>, <strong>spatial reasoning</strong>, <strong>reflection</strong>, <strong>planning</strong>.</li>
+      <li><strong>👉 Interleaved Multimodal Processing</strong> capabilities, especially handling long sequences of interleaved image-text context</li>
+      <li><strong>👉 Environmental Interaction</strong> abilities, enabling it to autonomously observe the environment, explore rooms, and find hidden objects</li>
+      <li><strong>👉 Open-source Models</strong> released in 7B/2B sizes</li>
+      <li><strong>👉 Open-source Dataset</strong> 🤗 <a href="https://huggingface.co/datasets/zwq2018/embodied_reasoner">Hugging Face</a>: 9.3k interleaved observation-reasoning-action trajectories, including 64K images and 8M thought tokens.</li>
     </ul>
   </div>
-  <div style="flex: 1;">
-    <img src="./assets/fig0.png" height="300"/>
-  </div>
-</div>
+  <div style="flex: 0.67; display: flex; justify-content: center; align-items: center;">
+    <img src="./assets/fig0.png" height="400"/>
+  </div>    
+</div>           
 
 
 
-Our contributions can be summarized as follows:
+
+
+
+
+
+
+
+Our contributions can be summarized as follows:   
 
 > **Task and Trajectory Engine:** Automatically synthesizes coherent **Observation-Thought-Action** trajectories, spaning 107 diverse indoor scenes, e.g., kitchens and living rooms, and covers 2,100 interactive objects (e.g., eggs, laptops) and 2,600 containers (e.g., refrigerators, drawers), *64K* a first-person perspective image from interaction and *8M* thought tokens. 
 <p align="center">
