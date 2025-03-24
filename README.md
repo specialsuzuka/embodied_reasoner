@@ -31,7 +31,7 @@
 ## Video 📷 📷
 <p align="center">
   <video width="640" controls autoplay muted>
-    <source src="assets/video_v2_en.mov" type="video/mp4">
+    <source src="./assets/video_v2_en.mov" type="video/mp4">
   </video>
 </p>
 
@@ -249,16 +249,16 @@ Below is an example of the JSON file contents:
     "trajectory": [
         "<...>...</...>",
         "<...>...</...>",
-        ...
+        "..."
     ],
     "images": [
         ".../init_observe.png",
-        ...
+        "..."
     ],
     "flag": "",
-    "time": ...,
+    "time": "...",
     "task_metadata": {
-        ....
+        "..."
     }
 }
 ```
