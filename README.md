@@ -36,10 +36,11 @@
 </p> -->
 <!-- [![Watch the demo](./assets/video_thumbnail.png)](https://github.com/zwq2018/embodied_reasoner/blob/main/assets/video_v2_en.mov?raw=true) -->
 
-<video controls width="600">
-  <source src="https://github.com/user-attachments/assets/5e60dfbf-a899-4a83-a637-392f0dacd6d7" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+
+https://github.com/user-attachments/assets/677497aa-2b8e-4ed2-a8c7-249bbe0b2206
+
+
+
 
 ## News 🔥🔥
 
