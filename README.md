@@ -21,10 +21,18 @@
 
 <p align="center">
           🤗 <a href="https://huggingface.co/datasets/zwq2018/embodied_reasoner">Hugging Face</a>
-          &nbsp&nbsp | &nbsp&nbsp 🤖 <a href="https://modelscope.cn/organization/qwen">ModelScope</a>
-          &nbsp&nbsp | &nbsp&nbsp 📑 <a href="https://arxiv.org/abs/2503.xxxxx">Arxiv</a> 
+          <!-- &nbsp&nbsp | &nbsp&nbsp 🤖 <a href="https://modelscope.cn/organization/qwen">ModelScope</a> -->
+          <!-- &nbsp&nbsp | &nbsp&nbsp 📑 <a href="https://arxiv.org/abs/2503.xxxxx">Arxiv</a>  -->
+          &nbsp&nbsp | &nbsp&nbsp <img src="assets/arxiv_logo.png" alt="arXiv" height="14"> <a href="https://arxiv.org/abs/2503.xxxxx">Arxiv</a> 
           &nbsp&nbsp | &nbsp&nbsp 📑 <a href="https://embodied-reasoner.github.io">WebPage</a> 
 <br>
+</p>
+
+## Video 📷 📷
+<p align="center">
+  <video width="640" controls autoplay muted>
+    <source src="assets/video_v2_en.mov" type="video/mp4">
+  </video>
 </p>
 
 ## News 🔥🔥
@@ -62,12 +70,6 @@ In this paper, we present **Embodied-Reasoner**, a multimodal embodied model tha
     <img src="./assets/fig0.png" height="400"/>
   </div>    
 </div>           
-
-
-
-
-
-
 
 
 
@@ -159,6 +161,119 @@ bash scripts/eval.sh
 ```
 
 ## Task and Trajectory Engine ⛲⛲
+
+You can navigate to the data_engine folder to synthesize tasks and trajectories. Below are the key files within the data_engine:
+
+```plaintext
+data_engine/
+├── taskgenerate/               # Item information and room metadata for task generation
+│   ├── bathrooms/
+│   ├── bedrooms/
+│   ├── kitchens/
+│   ├── living_rooms/
+│   └── pick_up_and_put.json
+├── TaskGenerate.py             # Task synthesis script
+├── o1StyleGenerate.py          # Trajectory synthesis script
+├── o1StyleGenerate_ordered.py  # Complex task trajectory synthesis script
+├── vlmCall.py                  # Script to call the VLM
+└── vlmCallapi_keys.py          # Please Set your API keys here
+
+```
+
+
+#### Step 1. Generate Task
+`TaskGenerate.py` can synthesize task templates and corresponding key actions. The generated task-related data will be stored in the `<tasktype>_metadata` folder under data_engine.
+
+You can run the following Python script to perform the task generation, and can modify parameters like task types within this Python file.
+```shell
+python TaskGenerate.py
+```
+
+For example, one generated task data entry is shown below, where actions contains a list of key actions for the task.
+```json
+{
+    "taskname": "Locate the Apple in the room.",
+    "tasktype": "single_search",
+    "metadatapath": "taskgenerate/kitchens/FloorPlan1/metadata.json",
+    "actions": [
+        {
+            "action": "navigate to",
+            "objectId": "CounterTop|-00.08|+01.15|00.00",
+            "objectType": "CounterTop",
+            "baseaction": "",
+            "reward": 1,
+            "relatedObject": [
+                "CounterTop|-00.08|+01.15|00.00",
+                "Apple|-00.47|+01.15|+00.48"
+            ]
+        },
+        {
+            "action": "end",
+            "objectId": "",
+            "objectType": "",
+            "baseaction": "",
+            "reward": 1,
+            "relatedObject": [
+                "CounterTop|-00.08|+01.15|00.00",
+                "Apple|-00.47|+01.15|+00.48"
+            ]
+        }
+    ],
+    "totalreward": 2
+}
+```
+
+#### Step 2. Generate O1-style Trajectory
+`o1StyleGenerate.py` and `o1StyleGenerate_ordered.py` can synthesize trajectories for 10 different sub-task types. Specifically, o1StyleGenerate_ordered.py is designed to synthesize more complex sequential object transfer tasks.
+
+You can run the following Python script to perform the trajectory generation. Additionally, you can set the task type and trajectory type within the script (typically, 'b' is shortest, 'a' is longer, and 'c' is the longest).
+
+```shell
+python o1StyleGenerate.py
+python o1StyleGenerate_ordered.py
+```
+
+Below is an example folder of a generated trajectory, including the JSON file and associated images for the trajectory.
+<p align="center">
+    <img src="./assets/trajectory.png"/ height=180>
+<p>
+
+
+Below is an example of the JSON file contents:
+
+```json
+{
+    "scene": "FloorPlan1",
+    "tasktype": "...",
+    "taskname": "Locate the Apple in the room.",
+    "trajectory": [
+        "<...>...</...>",
+        "<...>...</...>",
+        ...
+    ],
+    "images": [
+        ".../init_observe.png",
+        ...
+    ],
+    "flag": "",
+    "time": ...,
+    "task_metadata": {
+        ....
+    }
+}
+```
+- **scene:** the scene where the task is performed.
+- **tasktype:** the type of the task.
+- **taskname:** the name of the task.
+- **trajectory:** reasoning and decision-making content of the trajectory
+- **images:** paths to corresponding images (the first image represents the initial state; each subsequent image corresponds to the state after performing each action listed in trajectory).
+- **time and flag:** records the generation timestamp and exceptions encountered during trajectory generation.
+- **task_metadata:** task information generated during Step 1.
+
+
+
+To view our complete trajectory dataset, please visit our <a href="https://huggingface.co/datasets/zwq2018/embodied_reasoner">Hugging Face</a> Page.
+
 ## Citation
 
 If you find our work helpful, feel free to give us a cite.

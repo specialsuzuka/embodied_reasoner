@@ -2341,7 +2341,7 @@ if __name__ == "__main__":
     #### save in the taskgenerate/
     # collect_metadata()
     
-    ###### step2. choose a task type from task_types #############################
+    ###### step1. choose a task type from task_types #############################
     task_types=[
         "single_search",
         "single_search_from_closerep",
@@ -2354,10 +2354,10 @@ if __name__ == "__main__":
         "pickup_from_closerep_and_put_in_closerep",
         "ordered_pickup_two_object_and_put"
     ]
-    task_type="ordered_pickup_two_object_and_put"
+    task_type="single_search"
     
-    ##### step3. set the number of tasks to generate for each scene #############
-    num=10
+    ##### step2. set the number of tasks to generate for each scene #############
+    num=1
     
     for i in range(0,5):
         room_type = ['kitchens','living_rooms','bedrooms','bathrooms']

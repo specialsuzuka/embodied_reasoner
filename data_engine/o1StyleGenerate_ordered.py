@@ -51,7 +51,7 @@ class O1StyleGenerate_ordered:
             "taskname":self.task["taskname"],
             "trajectory":[],
             "images":[],
-            "round_metadata":[],
+            # "round_metadata":[],
             "flag":"",
             "time":0,
             # "task_metadata":{},
@@ -1014,10 +1014,10 @@ class O1StyleGenerate_ordered:
             json_path=f"{self.origin_path}/metadata/{self.round-1}_metadata{tag}.json"
         else:
             json_path=f"{self.origin_path}/metadata/{self.round}_metadata{tag}.json"
-        self.generate_o1style_data["round_metadata"].append(json_path)
-        save_data_to_json(self.metadata,json_path)
-        self.generate_o1style_data["round_navigable_list"].append(self.navigable_list)
-    
+        # self.generate_o1style_data["round_metadata"].append(json_path)
+        # save_data_to_json(self.metadata,json_path)
+        # self.generate_o1style_data["round_navigable_list"].append(self.navigable_list)
+        return
     
     
     
@@ -2659,10 +2659,10 @@ if __name__=="__main__":
 
                             o1Stylegenerate_ordered.initial_navigable_list()
  
-                            json_path=f"{origin_path}/metadata/0_metadata.json"
-                            o1Stylegenerate_ordered.generate_o1style_data["round_metadata"].append(json_path)
-                            save_data_to_json(o1Stylegenerate_ordered.metadata,json_path)
-                            o1Stylegenerate_ordered.generate_o1style_data["round_navigable_list"].append(o1Stylegenerate_ordered.navigable_list)
+                            # json_path=f"{origin_path}/metadata/0_metadata.json"
+                            # o1Stylegenerate_ordered.generate_o1style_data["round_metadata"].append(json_path)
+                            # save_data_to_json(o1Stylegenerate_ordered.metadata,json_path)
+                            # o1Stylegenerate_ordered.generate_o1style_data["round_navigable_list"].append(o1Stylegenerate_ordered.navigable_list)
 
                             
                             o1Stylegenerate_ordered.generate_o1style_data["task_metadata"]=task
