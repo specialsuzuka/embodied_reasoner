@@ -34,8 +34,12 @@
     <source src="./assets/video_v2_en.mp4">
   </video> 
 </p> -->
-[![Watch the demo](./assets/video_thumbnail.png)](https://github.com/zwq2018/embodied_reasoner/blob/main/assets/video_v2_en.mov?raw=true)
+<!-- [![Watch the demo](./assets/video_thumbnail.png)](https://github.com/zwq2018/embodied_reasoner/blob/main/assets/video_v2_en.mov?raw=true) -->
 
+<video width="600" controls>
+  <source src="https://github.com/zwq2018/embodied_reasoner/releases/download/video/video_v2_en.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## News 🔥🔥
 
