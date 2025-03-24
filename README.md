@@ -29,11 +29,13 @@
 </p>
 
 ## Video 📷 📷
-<p align="center">
-  <video width="640" controls autoplay muted>
-    <source src="./assets/video_v2_en.mov" type="video/mp4">
-  </video>
-</p>
+<!-- <p align="center">
+   <video width="640" controls autoplay muted>
+    <source src="./assets/video_v2_en.mp4">
+  </video> 
+</p> -->
+[![Watch the demo](./assets/video_thumbnail.png)](https://github.com/zwq2018/embodied_reasoner/blob/main/assets/video_v2_en.mov?raw=true)
+
 
 ## News 🔥🔥
 
