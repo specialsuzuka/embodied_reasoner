@@ -37,7 +37,12 @@
 <!-- [![Watch the demo](./assets/video_thumbnail.png)](https://github.com/zwq2018/embodied_reasoner/blob/main/assets/video_v2_en.mov?raw=true) -->
 
 
-https://github.com/user-attachments/assets/677497aa-2b8e-4ed2-a8c7-249bbe0b2206
+<!--https://github.com/user-attachments/assets/677497aa-2b8e-4ed2-a8c7-249bbe0b2206-->
+
+
+
+https://github.com/user-attachments/assets/a873c435-481d-458a-9c8a-156878d5d4b6
+
 
 
 
