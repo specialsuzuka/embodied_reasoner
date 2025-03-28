@@ -1,6 +1,6 @@
 # <img src="./assets/embodied-reasoner-logo.png" height="50">Embodied-Reasoner 
 ✨This is the official implementation of paper 
-<a href="https://arxiv.org/abs/2503.xxxxx">Embodied-Reasoner: Synergizing Visual Search, Reasoning, and Action for Embodied Interactive Tasks</a>
+<a href="https://arxiv.org/abs/2503.21696">Embodied-Reasoner: Synergizing Visual Search, Reasoning, and Action for Embodied Interactive Tasks</a>
 
 <table>
   <tr>
@@ -294,9 +294,10 @@ If you find our work helpful, feel free to give us a cite.
 @article{embodied-reasoner,
     title   = {Embodied-Reasoner: Synergizing Visual Search, Reasoning, and Action for Embodied Interactive Tasks}, 
     author  = {Wenqi Zhang and Mengna Wang and Gangao Liu and Huixin Xu and Yiwei Jiang and Yongliang Shen and Guiyang Hou and Zhe Zheng and Hang Zhang and Xin Li and Weiming Lu and Peng Li and Yueting Zhuang},
-    journal = {arXiv preprint arXiv:2503.xxxxx},
+    journal = {arXiv preprint arXiv:2503.21696},
     year    = {2025}
 }
+
 ```
 
 ## License
