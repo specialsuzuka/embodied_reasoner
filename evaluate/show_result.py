@@ -13,7 +13,7 @@ import base64
 import tiktoken
 import argparse
 
-# 定义计算 token 数量的函数
+
 model = "gpt-4o"
 step2count={}
 

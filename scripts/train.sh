@@ -31,7 +31,7 @@ sed -e "s|{model_path}|$MODEL_PATH|" \
     -e "s|{lr}|$lr|" \
     -e "s|{epoch}|$epoch|" \
     -e "s|{wandb_run_name}|$wandb_run_name|" \
-    fintune/full/template.yaml > LLaMA-Factory/examples/train_full/$wandb_run_name.yaml
+    LLaMA-Factory/examples/train_full/template.yaml > LLaMA-Factory/examples/train_full/$wandb_run_name.yaml
 
 # export CUDA_VISIBLE_DEVICES="0,1,2,3,4,5,6,7"
 # export PYTORCH_CUDA_ALLOC_CONF="expandable_segments:True"
