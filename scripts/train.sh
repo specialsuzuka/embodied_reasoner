@@ -31,14 +31,14 @@ sed -e "s|{model_path}|$MODEL_PATH|" \
     -e "s|{lr}|$lr|" \
     -e "s|{epoch}|$epoch|" \
     -e "s|{wandb_run_name}|$wandb_run_name|" \
-    LLaMA-Factory/examples/train_full/template.yaml > LLaMA-Factory/examples/train_full/$wandb_run_name.yaml
+    ../finetune/full/template.yaml > ./examples/train_full/$wandb_run_name.yaml
 
-# export CUDA_VISIBLE_DEVICES="0,1,2,3,4,5,6,7"
+# export CUDA_VISIBLE_DEVICES=
 # export PYTORCH_CUDA_ALLOC_CONF="expandable_segments:True"
 # export WANDB_DISABLED=False
-# export WANDB_API_KEY=
+# export WANDB_API_KEY=your_wandb_api_key
 # export PYTHONUNBUFFERED=1
 # export FORCE_TORCHRUN=1
 
-llamafactory-cli train LLaMA-Factory/examples/train_full/$wandb_run_name.yaml
+llamafactory-cli train ./examples/train_full/$wandb_run_name.yaml
 
