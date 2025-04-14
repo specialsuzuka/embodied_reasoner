@@ -7,8 +7,8 @@ import argparse
 from tqdm import tqdm
 import os
 import time
-# from ai2thor.controller import Controller
-# from ai2thor.platform import CloudRendering
+from ai2thor.controller import Controller
+from ai2thor.platform import CloudRendering
 MODE = "LOCAL" # choose ["LOCAL","API"]
 PLATFORM_TYPE="GPU" 
 
@@ -297,22 +297,22 @@ if __name__ == "__main__":
         print(args)
         data = load_data(args)
         success_count = 0
-        controller = None
-        # controller = Controller(
-        #     platform=CloudRendering,
-        #     snapToGrid=False,
-        #     quality='Medium',
-        #     agentMode="default",
-        #     massThreshold=None,
-        #     scene='FloorPlan1',
-        #     visibilityDistance=20,
-        #     gridSize=0.1,
-        #     renderDepthImage=False,
-        #     renderInstanceSegmentation=False,
-        #     width=800,
-        #     height=450,
-        #     fieldOfView=90,
-        # )
+        # controller = None
+        controller = Controller(
+            platform=CloudRendering,
+            snapToGrid=False,
+            quality='Medium',
+            agentMode="default",
+            massThreshold=None,
+            scene='FloorPlan1',
+            visibilityDistance=20,
+            gridSize=0.1,
+            renderDepthImage=False,
+            renderInstanceSegmentation=False,
+            width=800,
+            height=450,
+            fieldOfView=90,
+        )
         for test_data in tqdm(data):
             try:
                 test(controller, test_data, args.model_name, args.port)

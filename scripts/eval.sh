@@ -22,7 +22,14 @@ CUDA_VISIBLE_DEVICES=1 python inference/local_deploy.py \
     --model_name $MODEL_PATH \
     --port 10001
 
-wait
+echo "Waiting for ports ..."
+while ! nc -z localhost 20000; do   
+  sleep 1
+done
+
+while ! nc -z localhost 10001; do   
+  sleep 1
+done
 
 # start ai2thor engine and request inference server
 CUDA_VISIBLE_DEVICES=0 python evaluate/evaluate.py \
@@ -35,5 +42,5 @@ CUDA_VISIBLE_DEVICES=0 python evaluate/evaluate.py \
 
 wait 
 
-python evaluate/showresult.py \
+python evaluate/show_result.py \
     --model_name $MODEL_NAME

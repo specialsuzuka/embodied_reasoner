@@ -50,7 +50,7 @@ class BaseAgent(ABC):
         self.fieldOfView = fieldOfView
         if platform_type=="GPU":
             controller.reset(
-                platform=CloudRendering,
+                # platform=CloudRendering,
                 snapToGrid=False,
                 quality='Medium',
                 agentMode="default",
