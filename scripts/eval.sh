@@ -13,14 +13,14 @@ export PYTHONUNBUFFERED=1
 # embedding model for match object
 python ./inference/local_deploy.py \
     --embedding 1 \
-    --port 20000
+    --port 20000 &
 
 # vison language model inference server
 CUDA_VISIBLE_DEVICES=1 python inference/local_deploy.py \
     --frame "hf" \
     --model_type $MODEL_TYPE \
     --model_name $MODEL_PATH \
-    --port 10001
+    --port 10001 &
 
 echo "Waiting for ports ..."
 while ! nc -z localhost 20000; do   
