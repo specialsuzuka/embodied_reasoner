@@ -1,9 +1,9 @@
 set -e
 cd ../LLaMA-Factory
 # 1. 修改模型路径
-MODEL_PATH=""
-model_name=""
-merge_output_path="" # 合并模型的输出路径
+MODEL_PATH="/home/zmwang/public/public_data/models/Qwen2.5-VL-7B-Instruct"
+model_name="Qwen2.5-VL-7B-Instruct"
+merge_output_path="/home/aiseon/storage/zmwang_data/codes/LLaMA-Factory/results" # 合并模型的输出路径
 
 # 2. image_resolution默认为262144，即512x512, 
 image_resolution=262144
@@ -15,7 +15,7 @@ template="qwen2_vl"
 cutoff_len=16384
 
 # 5. 设置dataset
-dataset=""
+dataset="alpaca_en_demo"
 
 # 6. 设置lora参数
 lora_rank=8
@@ -52,7 +52,7 @@ sed -e "s|{model_path}|$MODEL_PATH|" \
     -e "s|{lr}|$lr|" \
     -e "s|{epoch}|$epoch|" \
     -e "s|{wandb_run_name}|$wandb_run_name|" \
-    ../finetune/lora/template.yaml > ./examples/train_lora/$wandb_run_name.yaml
+    ../embodied_reasoner/finetune/lora/template.yaml > ./examples/train_lora/$wandb_run_name.yaml
 
 # 10. 启动wandb需要导入wandb的API_KEY
 # export NCCL_P2P_DISABLE=1 # 关闭NCCL P2P
@@ -69,6 +69,6 @@ llamafactory-cli train ./examples/train_lora/$wandb_run_name.yaml
 sed -e "s|{model_path}|$MODEL_PATH|" \
     -e "s|{adapter_path}|$OUTPUT_PATH|" \
     -e "s|{output_path}|$merge_output_path|" \
-    ../finetune/lora/template.yaml > ./examples/merge_lora/qwen2_vl_lora_merge.yaml
+    ./finetune/lora/template.yaml > ./examples/merge_lora/qwen2_vl_lora_merge.yaml
 
 llamafactory-cli export ./examples/merge_lora/qwen2_vl_lora_merge.yaml

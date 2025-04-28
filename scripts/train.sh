@@ -1,9 +1,9 @@
 set -e
 cd ../LLaMA-Factory
-MODEL_PATH=""
-model_name=""
+MODEL_PATH="/home/zmwang/public/public_data/models/Qwen2.5-VL-7B-Instruct"
+model_name="Qwen2.5-VL-7B-Instruct"
 image_resolution=180000
-template="qwen2_vl"
+template="qwen2_5_vl"
 cutoff_len=32768
 dataset=""
 per_device_train_batch_size=1
@@ -31,7 +31,7 @@ sed -e "s|{model_path}|$MODEL_PATH|" \
     -e "s|{lr}|$lr|" \
     -e "s|{epoch}|$epoch|" \
     -e "s|{wandb_run_name}|$wandb_run_name|" \
-    ../finetune/full/template.yaml > ./examples/train_full/$wandb_run_name.yaml
+    ../embodied_reasoner/finetune/full/template.yaml > ./examples/train_full/$wandb_run_name.yaml
 
 # export CUDA_VISIBLE_DEVICES=
 # export PYTORCH_CUDA_ALLOC_CONF="expandable_segments:True"

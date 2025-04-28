@@ -1,7 +1,13 @@
+#yaml更新了
+
+
 ### model
 model_name_or_path: {model_path}
-image_resolution: {image_resolution} # 262144 # 512*512 检查最大
-video_resolution: 16384
+# image_resolution: {image_resolution} # 262144 # 512*512 检查最大
+image_max_pixels: {image_resolution} 
+# video_resolution: 16384
+video_max_pixels: 16384
+
 trust_remote_code: true
 
 ### method
@@ -10,7 +16,8 @@ do_train: true
 finetuning_type: lora # full
 freeze_vision_tower: true  # choices: [true, false]
 freeze_multi_modal_projector: true  # choices: [true, false]
-train_mm_proj_only: false  # choices: [true, false]
+# train_mm_proj_only: false  # choices: [true, false]
+freeze_language_model: false
 # deepspeed: examples/deepspeed/ds_z3_offload_config.json   # choices: [ds_z0_config.json, ds_z2_config.json, ds_z3_config.json]
 
 lora_rank: {lora_rank}

@@ -312,6 +312,9 @@ if __name__ == "__main__":
             width=800,
             height=450,
             fieldOfView=90,
+            # use_vulkan=False,
+            # gpu_device=0,
+            # headless=True
         )
         for test_data in tqdm(data):
             try:

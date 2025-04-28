@@ -3,6 +3,7 @@ from predictor.hf_infer import HfServer
 from predictor.vllm_infer import VllmServer
 from predictor.embedding_server import EmbeddingServer
 import os
+os.environ['USE_VULKAN'] = '0'
 import argparse
 # os.environ["CUDA_VISIBLE_DEVICES"] = "5"
 def http_server(args):

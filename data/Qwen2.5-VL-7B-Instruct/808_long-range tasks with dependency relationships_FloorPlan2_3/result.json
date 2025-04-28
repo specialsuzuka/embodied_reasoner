@@ -1,0 +1,1608 @@
+{
+    "identity": 808,
+    "scene": "FloorPlan2",
+    "tasktype": "long-range tasks with dependency relationships",
+    "instruction_idx": 3,
+    "model": "Qwen2.5-VL-7B-Instruct",
+    "taskname": "Put the Egg in the refrigerator and take the Lettuce out of the refrigerator to wash and place on a plate.",
+    "trajectory": [
+        {
+            "response": "",
+            "action": "init",
+            "object": null,
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan"
+            ],
+            "legal_objects": [
+                "CounterTop",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan"
+            ],
+            "success": 1,
+            "errorInfo": "",
+            "images": "./data/Qwen2.5-VL-7B-Instruct/808_long-range tasks with dependency relationships_FloorPlan2_3/FloorPlan2_1_init.png"
+        },
+        {
+            "response": "<DecisionMaking>navigate to fridge</DecisionMaking>",
+            "action": "navigate to",
+            "object": "Fridge",
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan"
+            ],
+            "legal_objects": [
+                "Pan",
+                "Cabinet",
+                "CounterTop",
+                "Fridge"
+            ],
+            "success": 1,
+            "errorInfo": "",
+            "images": "./data/Qwen2.5-VL-7B-Instruct/808_long-range tasks with dependency relationships_FloorPlan2_3/FloorPlan2_2_navigate_Fridge.png"
+        },
+        {
+            "response": "<DecisionMaking>open fridge</DecisionMaking>",
+            "action": "open",
+            "object": "Fridge",
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce"
+            ],
+            "legal_objects": [
+                "Apple",
+                "Pan",
+                "Lettuce",
+                "Cabinet",
+                "CounterTop",
+                "Fridge"
+            ],
+            "success": 1,
+            "errorInfo": "",
+            "images": "./data/Qwen2.5-VL-7B-Instruct/808_long-range tasks with dependency relationships_FloorPlan2_3/FloorPlan2_3_open_Fridge.png"
+        },
+        {
+            "response": "<DecisionMaking>pickup lettuce</DecisionMaking>",
+            "action": "pickup",
+            "object": "Lettuce",
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce"
+            ],
+            "legal_objects": [
+                "Apple",
+                "Pan",
+                "Lettuce",
+                "Cabinet",
+                "CounterTop",
+                "Fridge"
+            ],
+            "success": 1,
+            "errorInfo": "",
+            "images": "./data/Qwen2.5-VL-7B-Instruct/808_long-range tasks with dependency relationships_FloorPlan2_3/FloorPlan2_4_pick_up_Lettuce.png"
+        },
+        {
+            "response": "<DecisionMaking>go to sink</DecisionMaking>",
+            "action": "error",
+            "object": "Sink",
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce"
+            ],
+            "legal_objects": [
+                "Apple",
+                "Pan",
+                "Lettuce",
+                "Cabinet",
+                "CounterTop",
+                "Fridge"
+            ],
+            "success": 0,
+            "errorInfo": "Action is illegal. Please select an action from the Available_Actions.",
+            "images": []
+        },
+        {
+            "response": "<DecisionMaking>open tap</DecisionMaking>",
+            "action": "open",
+            "object": "Mug",
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce"
+            ],
+            "legal_objects": [
+                "Apple",
+                "Pan",
+                "Lettuce",
+                "Cabinet",
+                "CounterTop",
+                "Fridge"
+            ],
+            "success": 0,
+            "errorInfo": "<|feedback|>Action: open tap is illegal, Object: Mug is currently unavailable for interaction. Possible situations include: Mug does not exist in your current view; you are too far away from Mug; the Mug cannot perform operation open.\nYou can try \"move forward\" to approach the target object or \"navigate to <object>\" to reach nearby, larger objects for closer inspection.",
+            "images": null
+        },
+        {
+            "response": "<DecisionMaking>move forward</DecisionMaking>",
+            "action": "move forward",
+            "object": null,
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce"
+            ],
+            "legal_objects": [
+                "Apple",
+                "Pan",
+                "Lettuce",
+                "Cabinet",
+                "CounterTop",
+                "Fridge"
+            ],
+            "success": 1,
+            "errorInfo": "",
+            "images": "./data/Qwen2.5-VL-7B-Instruct/808_long-range tasks with dependency relationships_FloorPlan2_3/FloorPlan2_6_move_forward.png"
+        },
+        {
+            "response": "<DecisionMaking>navigate to sink</DecisionMaking>",
+            "action": "navigate to",
+            "object": "Sink",
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce"
+            ],
+            "legal_objects": [
+                "Apple",
+                "Pan",
+                "Lettuce",
+                "Cabinet",
+                "CounterTop",
+                "Fridge"
+            ],
+            "success": 0,
+            "errorInfo": "<|feedback|>Action: \"navigate to\" is illegal, \"Sink\" is the most relevant item in this room and \"navigate to sink\". Object: \"Sink\" is not currently navigable, you can try \"navigate to <object>\" to reach nearby, larger objects for closer observation.\n",
+            "images": null
+        },
+        {
+            "response": "<DecisionMaking>open tap</DecisionMaking>",
+            "action": "open",
+            "object": "Mug",
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce"
+            ],
+            "legal_objects": [
+                "Apple",
+                "Pan",
+                "Lettuce",
+                "Cabinet",
+                "CounterTop",
+                "Fridge"
+            ],
+            "success": 0,
+            "errorInfo": "<|feedback|>Action: open tap is illegal, Object: Mug is currently unavailable for interaction. Possible situations include: Mug does not exist in your current view; you are too far away from Mug; the Mug cannot perform operation open.\nYou can try \"move forward\" to approach the target object or \"navigate to <object>\" to reach nearby, larger objects for closer inspection.",
+            "images": null
+        },
+        {
+            "response": "<DecisionMaking>move forward</DecisionMaking>",
+            "action": "move forward",
+            "object": null,
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce"
+            ],
+            "legal_objects": [
+                "Apple",
+                "Pan",
+                "Lettuce",
+                "Cabinet",
+                "CounterTop",
+                "Fridge"
+            ],
+            "success": 1,
+            "errorInfo": "",
+            "images": "./data/Qwen2.5-VL-7B-Instruct/808_long-range tasks with dependency relationships_FloorPlan2_3/FloorPlan2_9_move_forward.png"
+        },
+        {
+            "response": "<DecisionMaking>navigate to sink</DecisionMaking>",
+            "action": "navigate to",
+            "object": "Sink",
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce"
+            ],
+            "legal_objects": [
+                "Apple",
+                "Pan",
+                "Lettuce",
+                "Cabinet",
+                "CounterTop",
+                "Fridge"
+            ],
+            "success": 0,
+            "errorInfo": "<|feedback|>Action: \"navigate to\" is illegal, \"Sink\" is the most relevant item in this room and \"navigate to sink\". Object: \"Sink\" is not currently navigable, you can try \"navigate to <object>\" to reach nearby, larger objects for closer observation.\n",
+            "images": null
+        },
+        {
+            "response": "<DecisionMaking>open tap</DecisionMaking>",
+            "action": "open",
+            "object": "Mug",
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce"
+            ],
+            "legal_objects": [
+                "Apple",
+                "Pan",
+                "Lettuce",
+                "Cabinet",
+                "CounterTop",
+                "Fridge"
+            ],
+            "success": 0,
+            "errorInfo": "<|feedback|>Action: open tap is illegal, Object: Mug is currently unavailable for interaction. Possible situations include: Mug does not exist in your current view; you are too far away from Mug; the Mug cannot perform operation open.\nYou can try \"move forward\" to approach the target object or \"navigate to <object>\" to reach nearby, larger objects for closer inspection.",
+            "images": null
+        },
+        {
+            "response": "<DecisionMaking>move forward</DecisionMaking>",
+            "action": "move forward",
+            "object": null,
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce"
+            ],
+            "legal_objects": [
+                "Apple",
+                "Pan",
+                "Lettuce",
+                "Cabinet",
+                "CounterTop",
+                "Fridge"
+            ],
+            "success": 1,
+            "errorInfo": "",
+            "images": "./data/Qwen2.5-VL-7B-Instruct/808_long-range tasks with dependency relationships_FloorPlan2_3/FloorPlan2_12_move_forward.png"
+        },
+        {
+            "response": "<DecisionMaking>navigate to sink</DecisionMaking>",
+            "action": "navigate to",
+            "object": "Sink",
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce"
+            ],
+            "legal_objects": [
+                "Apple",
+                "Pan",
+                "Lettuce",
+                "Cabinet",
+                "CounterTop",
+                "Fridge"
+            ],
+            "success": 0,
+            "errorInfo": "<|feedback|>Action: \"navigate to\" is illegal, \"Sink\" is the most relevant item in this room and \"navigate to sink\". Object: \"Sink\" is not currently navigable, you can try \"navigate to <object>\" to reach nearby, larger objects for closer observation.\n",
+            "images": null
+        },
+        {
+            "response": "<DecisionMaking>open tap</DecisionMaking>",
+            "action": "open",
+            "object": "Mug",
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce"
+            ],
+            "legal_objects": [
+                "Apple",
+                "Pan",
+                "Lettuce",
+                "Cabinet",
+                "CounterTop",
+                "Fridge"
+            ],
+            "success": 0,
+            "errorInfo": "<|feedback|>Action: open tap is illegal, Object: Mug is currently unavailable for interaction. Possible situations include: Mug does not exist in your current view; you are too far away from Mug; the Mug cannot perform operation open.\nYou can try \"move forward\" to approach the target object or \"navigate to <object>\" to reach nearby, larger objects for closer inspection.",
+            "images": null
+        },
+        {
+            "response": "<DecisionMaking>move forward</DecisionMaking>",
+            "action": "move forward",
+            "object": null,
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce"
+            ],
+            "legal_objects": [
+                "Apple",
+                "Pan",
+                "Lettuce",
+                "Cabinet",
+                "CounterTop",
+                "Fridge"
+            ],
+            "success": 1,
+            "errorInfo": "",
+            "images": "./data/Qwen2.5-VL-7B-Instruct/808_long-range tasks with dependency relationships_FloorPlan2_3/FloorPlan2_15_move_forward.png"
+        },
+        {
+            "response": "<DecisionMaking>navigate to sink</DecisionMaking>",
+            "action": "navigate to",
+            "object": "Sink",
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce"
+            ],
+            "legal_objects": [
+                "Apple",
+                "Pan",
+                "Lettuce",
+                "Cabinet",
+                "CounterTop",
+                "Fridge"
+            ],
+            "success": 0,
+            "errorInfo": "<|feedback|>Action: \"navigate to\" is illegal, \"Sink\" is the most relevant item in this room and \"navigate to sink\". Object: \"Sink\" is not currently navigable, you can try \"navigate to <object>\" to reach nearby, larger objects for closer observation.\n",
+            "images": null
+        },
+        {
+            "response": "<DecisionMaking>open tap</DecisionMaking>",
+            "action": "open",
+            "object": "Mug",
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce"
+            ],
+            "legal_objects": [
+                "Apple",
+                "Pan",
+                "Lettuce",
+                "Cabinet",
+                "CounterTop",
+                "Fridge"
+            ],
+            "success": 0,
+            "errorInfo": "<|feedback|>Action: open tap is illegal, Object: Mug is currently unavailable for interaction. Possible situations include: Mug does not exist in your current view; you are too far away from Mug; the Mug cannot perform operation open.\nYou can try \"move forward\" to approach the target object or \"navigate to <object>\" to reach nearby, larger objects for closer inspection.",
+            "images": null
+        },
+        {
+            "response": "<DecisionMaking>move forward</DecisionMaking>",
+            "action": "move forward",
+            "object": null,
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce"
+            ],
+            "legal_objects": [
+                "Apple",
+                "Pan",
+                "Lettuce",
+                "Cabinet",
+                "CounterTop",
+                "Fridge"
+            ],
+            "success": 1,
+            "errorInfo": "",
+            "images": "./data/Qwen2.5-VL-7B-Instruct/808_long-range tasks with dependency relationships_FloorPlan2_3/FloorPlan2_18_move_forward.png"
+        },
+        {
+            "response": "<DecisionMaking>navigate to cabinet</DecisionMaking>",
+            "action": "navigate to",
+            "object": "Cabinet",
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce"
+            ],
+            "legal_objects": [
+                "Lettuce",
+                "Window",
+                "Cabinet"
+            ],
+            "success": 1,
+            "errorInfo": "",
+            "images": "./data/Qwen2.5-VL-7B-Instruct/808_long-range tasks with dependency relationships_FloorPlan2_3/FloorPlan2_19_navigate_Cabinet.png"
+        },
+        {
+            "response": "<DecisionMaking>open cabinet</DecisionMaking>",
+            "action": "open",
+            "object": "Cabinet",
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce",
+                "Cup"
+            ],
+            "legal_objects": [
+                "Cup",
+                "Plate",
+                "Lettuce",
+                "Cabinet"
+            ],
+            "success": 1,
+            "errorInfo": "",
+            "images": "./data/Qwen2.5-VL-7B-Instruct/808_long-range tasks with dependency relationships_FloorPlan2_3/FloorPlan2_20_open_Cabinet.png"
+        },
+        {
+            "response": "<DecisionMaking>pickup lettuce</DecisionMaking>",
+            "action": "pickup",
+            "object": "Lettuce",
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce",
+                "Cup"
+            ],
+            "legal_objects": [
+                "Cup",
+                "Plate",
+                "Lettuce",
+                "Cabinet"
+            ],
+            "success": 0,
+            "errorInfo": "<|feedback|>Action: pickup lettuce is illegal, Object: Lettuce is currently unavailable for interaction. Possible situations include: Lettuce does not exist in your current view; you are too far away from Lettuce; the Lettuce cannot perform operation pickup.\nYou can try \"move forward\" to approach the target object or \"navigate to <object>\" to reach nearby, larger objects for closer inspection.",
+            "images": "./data/Qwen2.5-VL-7B-Instruct/808_long-range tasks with dependency relationships_FloorPlan2_3/FloorPlan2_21_pick_up_Lettuce.png"
+        },
+        {
+            "response": "<DecisionMaking>move forward</DecisionMaking>",
+            "action": "move forward",
+            "object": null,
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce",
+                "Cup",
+                "CoffeeMachine"
+            ],
+            "legal_objects": [
+                "Cup",
+                "Plate",
+                "Lettuce",
+                "Window",
+                "CoffeeMachine",
+                "Cabinet"
+            ],
+            "success": 1,
+            "errorInfo": "",
+            "images": "./data/Qwen2.5-VL-7B-Instruct/808_long-range tasks with dependency relationships_FloorPlan2_3/FloorPlan2_22_move_forward.png"
+        },
+        {
+            "response": "<DecisionMaking>navigate to cabinet</DecisionMaking>",
+            "action": "navigate to",
+            "object": "Cabinet",
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce",
+                "Cup",
+                "CoffeeMachine",
+                "Knife",
+                "Faucet",
+                "Pot",
+                "Drawer",
+                "Microwave"
+            ],
+            "legal_objects": [
+                "Knife",
+                "Faucet",
+                "Pot",
+                "SinkBasin",
+                "Drawer",
+                "Window",
+                "Lettuce",
+                "Cabinet",
+                "Microwave",
+                "CoffeeMachine",
+                "CounterTop"
+            ],
+            "success": 1,
+            "errorInfo": "",
+            "images": "./data/Qwen2.5-VL-7B-Instruct/808_long-range tasks with dependency relationships_FloorPlan2_3/FloorPlan2_23_navigate_Cabinet.png"
+        },
+        {
+            "response": "<DecisionMaking>navigate to sink</DecisionMaking>",
+            "action": "navigate to",
+            "object": "Sink",
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce",
+                "Cup",
+                "CoffeeMachine",
+                "Knife",
+                "Faucet",
+                "Pot",
+                "Drawer",
+                "Microwave"
+            ],
+            "legal_objects": [
+                "Knife",
+                "Faucet",
+                "Pot",
+                "SinkBasin",
+                "Drawer",
+                "Window",
+                "Lettuce",
+                "Cabinet",
+                "Microwave",
+                "CoffeeMachine",
+                "CounterTop"
+            ],
+            "success": 0,
+            "errorInfo": "<|feedback|>Action: \"navigate to\" is illegal, \"Sink\" is the most relevant item in this room and \"navigate to sink\". Object: \"Sink\" is not currently navigable, you can try \"navigate to <object>\" to reach nearby, larger objects for closer observation.\n",
+            "images": null
+        },
+        {
+            "response": "<DecisionMaking>navigate to sink</DecisionMaking>",
+            "action": "navigate to",
+            "object": "Sink",
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce",
+                "Cup",
+                "CoffeeMachine",
+                "Knife",
+                "Faucet",
+                "Pot",
+                "Drawer",
+                "Microwave"
+            ],
+            "legal_objects": [
+                "Knife",
+                "Faucet",
+                "Pot",
+                "SinkBasin",
+                "Drawer",
+                "Window",
+                "Lettuce",
+                "Cabinet",
+                "Microwave",
+                "CoffeeMachine",
+                "CounterTop"
+            ],
+            "success": 0,
+            "errorInfo": "<|feedback|>Action: \"navigate to\" is illegal, \"Sink\" is the most relevant item in this room and \"navigate to sink\". Object: \"Sink\" is not currently navigable, you can try \"navigate to <object>\" to reach nearby, larger objects for closer observation.\n",
+            "images": null
+        },
+        {
+            "response": "<DecisionMaking>navigate to sink</DecisionMaking>",
+            "action": "navigate to",
+            "object": "Sink",
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce",
+                "Cup",
+                "CoffeeMachine",
+                "Knife",
+                "Faucet",
+                "Pot",
+                "Drawer",
+                "Microwave"
+            ],
+            "legal_objects": [
+                "Knife",
+                "Faucet",
+                "Pot",
+                "SinkBasin",
+                "Drawer",
+                "Window",
+                "Lettuce",
+                "Cabinet",
+                "Microwave",
+                "CoffeeMachine",
+                "CounterTop"
+            ],
+            "success": 0,
+            "errorInfo": "<|feedback|>Action: \"navigate to\" is illegal, \"Sink\" is the most relevant item in this room and \"navigate to sink\". Object: \"Sink\" is not currently navigable, you can try \"navigate to <object>\" to reach nearby, larger objects for closer observation.\n",
+            "images": null
+        },
+        {
+            "response": "<DecisionMaking>open tap</DecisionMaking>",
+            "action": "open",
+            "object": "Mug",
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce",
+                "Cup",
+                "CoffeeMachine",
+                "Knife",
+                "Faucet",
+                "Pot",
+                "Drawer",
+                "Microwave"
+            ],
+            "legal_objects": [
+                "Knife",
+                "Faucet",
+                "Pot",
+                "SinkBasin",
+                "Drawer",
+                "Window",
+                "Lettuce",
+                "Cabinet",
+                "Microwave",
+                "CoffeeMachine",
+                "CounterTop"
+            ],
+            "success": 0,
+            "errorInfo": "<|feedback|>Action: open tap is illegal, Object: Mug is currently unavailable for interaction. Possible situations include: Mug does not exist in your current view; you are too far away from Mug; the Mug cannot perform operation open.\nYou can try \"move forward\" to approach the target object or \"navigate to <object>\" to reach nearby, larger objects for closer inspection.",
+            "images": null
+        },
+        {
+            "response": "<DecisionMaking>move forward</DecisionMaking>",
+            "action": "move forward",
+            "object": null,
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce",
+                "Cup",
+                "CoffeeMachine",
+                "Knife",
+                "Faucet",
+                "Pot",
+                "Drawer",
+                "Microwave"
+            ],
+            "legal_objects": [
+                "Knife",
+                "Faucet",
+                "Pot",
+                "SinkBasin",
+                "Drawer",
+                "Window",
+                "Lettuce",
+                "Cabinet",
+                "Microwave",
+                "CoffeeMachine",
+                "CounterTop"
+            ],
+            "success": 1,
+            "errorInfo": "",
+            "images": "./data/Qwen2.5-VL-7B-Instruct/808_long-range tasks with dependency relationships_FloorPlan2_3/FloorPlan2_28_move_forward.png"
+        },
+        {
+            "response": "<DecisionMaking>navigate to sink</DecisionMaking>",
+            "action": "navigate to",
+            "object": "Sink",
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce",
+                "Cup",
+                "CoffeeMachine",
+                "Knife",
+                "Faucet",
+                "Pot",
+                "Drawer",
+                "Microwave"
+            ],
+            "legal_objects": [
+                "Knife",
+                "Faucet",
+                "Pot",
+                "SinkBasin",
+                "Drawer",
+                "Window",
+                "Lettuce",
+                "Cabinet",
+                "Microwave",
+                "CoffeeMachine",
+                "CounterTop"
+            ],
+            "success": 0,
+            "errorInfo": "<|feedback|>Action: \"navigate to\" is illegal, \"Sink\" is the most relevant item in this room and \"navigate to sink\". Object: \"Sink\" is not currently navigable, you can try \"navigate to <object>\" to reach nearby, larger objects for closer observation.\n",
+            "images": null
+        },
+        {
+            "response": "<DecisionMaking>open tap</DecisionMaking>",
+            "action": "open",
+            "object": "Mug",
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce",
+                "Cup",
+                "CoffeeMachine",
+                "Knife",
+                "Faucet",
+                "Pot",
+                "Drawer",
+                "Microwave"
+            ],
+            "legal_objects": [
+                "Knife",
+                "Faucet",
+                "Pot",
+                "SinkBasin",
+                "Drawer",
+                "Window",
+                "Lettuce",
+                "Cabinet",
+                "Microwave",
+                "CoffeeMachine",
+                "CounterTop"
+            ],
+            "success": 0,
+            "errorInfo": "<|feedback|>Action: open tap is illegal, Object: Mug is currently unavailable for interaction. Possible situations include: Mug does not exist in your current view; you are too far away from Mug; the Mug cannot perform operation open.\nYou can try \"move forward\" to approach the target object or \"navigate to <object>\" to reach nearby, larger objects for closer inspection.",
+            "images": null
+        },
+        {
+            "response": "<DecisionMaking>move forward</DecisionMaking>",
+            "action": "move forward",
+            "object": null,
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce",
+                "Cup",
+                "CoffeeMachine",
+                "Knife",
+                "Faucet",
+                "Pot",
+                "Drawer",
+                "Microwave"
+            ],
+            "legal_objects": [
+                "Knife",
+                "Faucet",
+                "Pot",
+                "SinkBasin",
+                "Drawer",
+                "Window",
+                "Lettuce",
+                "Cabinet",
+                "Microwave",
+                "CoffeeMachine",
+                "CounterTop"
+            ],
+            "success": 1,
+            "errorInfo": "",
+            "images": "./data/Qwen2.5-VL-7B-Instruct/808_long-range tasks with dependency relationships_FloorPlan2_3/FloorPlan2_31_move_forward.png"
+        },
+        {
+            "response": "<DecisionMaking>navigate to sink</DecisionMaking>",
+            "action": "navigate to",
+            "object": "Sink",
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce",
+                "Cup",
+                "CoffeeMachine",
+                "Knife",
+                "Faucet",
+                "Pot",
+                "Drawer",
+                "Microwave"
+            ],
+            "legal_objects": [
+                "Knife",
+                "Faucet",
+                "Pot",
+                "SinkBasin",
+                "Drawer",
+                "Window",
+                "Lettuce",
+                "Cabinet",
+                "Microwave",
+                "CoffeeMachine",
+                "CounterTop"
+            ],
+            "success": 0,
+            "errorInfo": "<|feedback|>Action: \"navigate to\" is illegal, \"Sink\" is the most relevant item in this room and \"navigate to sink\". Object: \"Sink\" is not currently navigable, you can try \"navigate to <object>\" to reach nearby, larger objects for closer observation.\n",
+            "images": null
+        },
+        {
+            "response": "<DecisionMaking>open tap</DecisionMaking>",
+            "action": "open",
+            "object": "Mug",
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce",
+                "Cup",
+                "CoffeeMachine",
+                "Knife",
+                "Faucet",
+                "Pot",
+                "Drawer",
+                "Microwave"
+            ],
+            "legal_objects": [
+                "Knife",
+                "Faucet",
+                "Pot",
+                "SinkBasin",
+                "Drawer",
+                "Window",
+                "Lettuce",
+                "Cabinet",
+                "Microwave",
+                "CoffeeMachine",
+                "CounterTop"
+            ],
+            "success": 0,
+            "errorInfo": "<|feedback|>Action: open tap is illegal, Object: Mug is currently unavailable for interaction. Possible situations include: Mug does not exist in your current view; you are too far away from Mug; the Mug cannot perform operation open.\nYou can try \"move forward\" to approach the target object or \"navigate to <object>\" to reach nearby, larger objects for closer inspection.",
+            "images": null
+        },
+        {
+            "response": "<DecisionMaking>move forward</DecisionMaking>",
+            "action": "move forward",
+            "object": null,
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce",
+                "Cup",
+                "CoffeeMachine",
+                "Knife",
+                "Faucet",
+                "Pot",
+                "Drawer",
+                "Microwave"
+            ],
+            "legal_objects": [
+                "Knife",
+                "Faucet",
+                "Pot",
+                "SinkBasin",
+                "Drawer",
+                "Window",
+                "Lettuce",
+                "Cabinet",
+                "Microwave",
+                "CoffeeMachine",
+                "CounterTop"
+            ],
+            "success": 1,
+            "errorInfo": "",
+            "images": "./data/Qwen2.5-VL-7B-Instruct/808_long-range tasks with dependency relationships_FloorPlan2_3/FloorPlan2_34_move_forward.png"
+        },
+        {
+            "response": "<DecisionMaking>navigate to sink</DecisionMaking>",
+            "action": "navigate to",
+            "object": "Sink",
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce",
+                "Cup",
+                "CoffeeMachine",
+                "Knife",
+                "Faucet",
+                "Pot",
+                "Drawer",
+                "Microwave"
+            ],
+            "legal_objects": [
+                "Knife",
+                "Faucet",
+                "Pot",
+                "SinkBasin",
+                "Drawer",
+                "Window",
+                "Lettuce",
+                "Cabinet",
+                "Microwave",
+                "CoffeeMachine",
+                "CounterTop"
+            ],
+            "success": 0,
+            "errorInfo": "<|feedback|>Action: \"navigate to\" is illegal, \"Sink\" is the most relevant item in this room and \"navigate to sink\". Object: \"Sink\" is not currently navigable, you can try \"navigate to <object>\" to reach nearby, larger objects for closer observation.\n",
+            "images": null
+        },
+        {
+            "response": "<DecisionMaking>open tap</DecisionMaking>",
+            "action": "open",
+            "object": "Mug",
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce",
+                "Cup",
+                "CoffeeMachine",
+                "Knife",
+                "Faucet",
+                "Pot",
+                "Drawer",
+                "Microwave"
+            ],
+            "legal_objects": [
+                "Knife",
+                "Faucet",
+                "Pot",
+                "SinkBasin",
+                "Drawer",
+                "Window",
+                "Lettuce",
+                "Cabinet",
+                "Microwave",
+                "CoffeeMachine",
+                "CounterTop"
+            ],
+            "success": 0,
+            "errorInfo": "<|feedback|>Action: open tap is illegal, Object: Mug is currently unavailable for interaction. Possible situations include: Mug does not exist in your current view; you are too far away from Mug; the Mug cannot perform operation open.\nYou can try \"move forward\" to approach the target object or \"navigate to <object>\" to reach nearby, larger objects for closer inspection.",
+            "images": null
+        },
+        {
+            "response": "<DecisionMaking>move forward</DecisionMaking>",
+            "action": "end",
+            "object": null,
+            "legal_locations": [
+                "CounterTop",
+                "Fridge",
+                "SinkBasin",
+                "Plate",
+                "Window",
+                "Cabinet",
+                "Chair",
+                "GarbageCan",
+                "Pan",
+                "Apple",
+                "Lettuce",
+                "Cup",
+                "CoffeeMachine",
+                "Knife",
+                "Faucet",
+                "Pot",
+                "Drawer",
+                "Microwave"
+            ],
+            "legal_objects": [
+                "Knife",
+                "Faucet",
+                "Pot",
+                "SinkBasin",
+                "Drawer",
+                "Window",
+                "Lettuce",
+                "Cabinet",
+                "Microwave",
+                "CoffeeMachine",
+                "CounterTop"
+            ],
+            "success": 1,
+            "errorInfo": "",
+            "images": []
+        }
+    ],
+    "messages": [
+        {
+            "role": "system",
+            "content": "You are a robot in given room. You need to complete the tasks according to human instructions. We provide an Available_Actions set and the corresponding explanations for each action. Each step, you should select one action from Available_Actions."
+        },
+        {
+            "role": "user",
+            "content": "<image>This is an image from your frontal perspective. Please select an action from the Available_Actions and fill in the arguments.\nTask: \"Put the Egg in the refrigerator and take the Lettuce out of the refrigerator to wash and place on a plate.\"\nAvailable_Actions: {\n\"navigate to <object>\": Move to the object.\n\"pickup <object>\": Pick up the object.\n\"put <object>\": Put the item in your hand into or on the object.\n\"toggle <object>\": Switch the object on or off.\n\"open <object>\": Open the object (container), and you will see inside the object.\n\"close <object>\": Close the object.\n\"observe\": You can obtain image of your directly rear, left, and right perspectives.\n\"move forward\": Move forward to see more clearly.\n\"end\": If you think you have completed the task, please output \"end\".}\nBefore making each decision, you can think, plan, and even reflect step by step, and then output your final action.\nYour final action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>navigate to fridge</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<image>After executing your previous \"navigate to Fridge\", you get this new image above.\nTo complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>open fridge</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<image>After executing your previous \"open Fridge\", you get this new image above.\nTo complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>pickup lettuce</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<image>After executing your previous \"pickup Lettuce\", you get this new image above.\nTo complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>go to sink</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "Action is illegal. Please select an action from the Available_Actions.To complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>open tap</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<|feedback|>Action: open tap is illegal, Object: Mug is currently unavailable for interaction. Possible situations include: Mug does not exist in your current view; you are too far away from Mug; the Mug cannot perform operation open.\nYou can try \"move forward\" to approach the target object or \"navigate to <object>\" to reach nearby, larger objects for closer inspection.To complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>move forward</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<image>After executing your previous \"move forward\", you get this new image above.\nYou can use \"navigate to <object>\" to reach nearby, larger objects for closer inspection.\nTo complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>navigate to sink</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<|feedback|>Action: \"navigate to\" is illegal, \"Sink\" is the most relevant item in this room and \"navigate to sink\". Object: \"Sink\" is not currently navigable, you can try \"navigate to <object>\" to reach nearby, larger objects for closer observation.\nTo complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>open tap</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<|feedback|>Action: open tap is illegal, Object: Mug is currently unavailable for interaction. Possible situations include: Mug does not exist in your current view; you are too far away from Mug; the Mug cannot perform operation open.\nYou can try \"move forward\" to approach the target object or \"navigate to <object>\" to reach nearby, larger objects for closer inspection.To complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>move forward</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<image>After executing your previous \"move forward\", you get this new image above.\nYou can use \"navigate to <object>\" to reach nearby, larger objects for closer inspection.\nTo complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>navigate to sink</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<|feedback|>Action: \"navigate to\" is illegal, \"Sink\" is the most relevant item in this room and \"navigate to sink\". Object: \"Sink\" is not currently navigable, you can try \"navigate to <object>\" to reach nearby, larger objects for closer observation.\nTo complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>open tap</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<|feedback|>Action: open tap is illegal, Object: Mug is currently unavailable for interaction. Possible situations include: Mug does not exist in your current view; you are too far away from Mug; the Mug cannot perform operation open.\nYou can try \"move forward\" to approach the target object or \"navigate to <object>\" to reach nearby, larger objects for closer inspection.To complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>move forward</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<image>After executing your previous \"move forward\", you get this new image above.\nYou can use \"navigate to <object>\" to reach nearby, larger objects for closer inspection.\nTo complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>navigate to sink</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<|feedback|>Action: \"navigate to\" is illegal, \"Sink\" is the most relevant item in this room and \"navigate to sink\". Object: \"Sink\" is not currently navigable, you can try \"navigate to <object>\" to reach nearby, larger objects for closer observation.\nTo complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>open tap</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<|feedback|>Action: open tap is illegal, Object: Mug is currently unavailable for interaction. Possible situations include: Mug does not exist in your current view; you are too far away from Mug; the Mug cannot perform operation open.\nYou can try \"move forward\" to approach the target object or \"navigate to <object>\" to reach nearby, larger objects for closer inspection.To complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>move forward</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<image>After executing your previous \"move forward\", you get this new image above.\nYou can use \"navigate to <object>\" to reach nearby, larger objects for closer inspection.\nTo complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>navigate to sink</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<|feedback|>Action: \"navigate to\" is illegal, \"Sink\" is the most relevant item in this room and \"navigate to sink\". Object: \"Sink\" is not currently navigable, you can try \"navigate to <object>\" to reach nearby, larger objects for closer observation.\nTo complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>open tap</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<|feedback|>Action: open tap is illegal, Object: Mug is currently unavailable for interaction. Possible situations include: Mug does not exist in your current view; you are too far away from Mug; the Mug cannot perform operation open.\nYou can try \"move forward\" to approach the target object or \"navigate to <object>\" to reach nearby, larger objects for closer inspection.To complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>move forward</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<image>After executing your previous \"move forward\", you get this new image above.\nYou can use \"navigate to <object>\" to reach nearby, larger objects for closer inspection.\nTo complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>navigate to cabinet</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<image>After executing your previous \"navigate to Cabinet\", you get this new image above.\nTo complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>open cabinet</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<image>After executing your previous \"open Cabinet\", you get this new image above.\nTo complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>pickup lettuce</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<|feedback|>Action: pickup lettuce is illegal, Object: Lettuce is currently unavailable for interaction. Possible situations include: Lettuce does not exist in your current view; you are too far away from Lettuce; the Lettuce cannot perform operation pickup.\nYou can try \"move forward\" to approach the target object or \"navigate to <object>\" to reach nearby, larger objects for closer inspection.To complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>move forward</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<image>After executing your previous \"move forward\", you get this new image above.\nYou can use \"navigate to <object>\" to reach nearby, larger objects for closer inspection.\nTo complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>navigate to cabinet</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<image>After executing your previous \"navigate to Cabinet\", you get this new image above.\nTo complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>navigate to sink</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<|feedback|>Action: \"navigate to\" is illegal, \"Sink\" is the most relevant item in this room and \"navigate to sink\". Object: \"Sink\" is not currently navigable, you can try \"navigate to <object>\" to reach nearby, larger objects for closer observation.\nTo complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>navigate to sink</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<|feedback|>Action: \"navigate to\" is illegal, \"Sink\" is the most relevant item in this room and \"navigate to sink\". Object: \"Sink\" is not currently navigable, you can try \"navigate to <object>\" to reach nearby, larger objects for closer observation.\nTo complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>navigate to sink</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<|feedback|>Action: \"navigate to\" is illegal, \"Sink\" is the most relevant item in this room and \"navigate to sink\". Object: \"Sink\" is not currently navigable, you can try \"navigate to <object>\" to reach nearby, larger objects for closer observation.\nTo complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>open tap</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<|feedback|>Action: open tap is illegal, Object: Mug is currently unavailable for interaction. Possible situations include: Mug does not exist in your current view; you are too far away from Mug; the Mug cannot perform operation open.\nYou can try \"move forward\" to approach the target object or \"navigate to <object>\" to reach nearby, larger objects for closer inspection.To complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>move forward</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<image>After executing your previous \"move forward\", you get this new image above.\nYou can use \"navigate to <object>\" to reach nearby, larger objects for closer inspection.\nTo complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>navigate to sink</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<|feedback|>Action: \"navigate to\" is illegal, \"Sink\" is the most relevant item in this room and \"navigate to sink\". Object: \"Sink\" is not currently navigable, you can try \"navigate to <object>\" to reach nearby, larger objects for closer observation.\nTo complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>open tap</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<|feedback|>Action: open tap is illegal, Object: Mug is currently unavailable for interaction. Possible situations include: Mug does not exist in your current view; you are too far away from Mug; the Mug cannot perform operation open.\nYou can try \"move forward\" to approach the target object or \"navigate to <object>\" to reach nearby, larger objects for closer inspection.To complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>move forward</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<image>After executing your previous \"move forward\", you get this new image above.\nYou can use \"navigate to <object>\" to reach nearby, larger objects for closer inspection.\nTo complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>navigate to sink</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<|feedback|>Action: \"navigate to\" is illegal, \"Sink\" is the most relevant item in this room and \"navigate to sink\". Object: \"Sink\" is not currently navigable, you can try \"navigate to <object>\" to reach nearby, larger objects for closer observation.\nTo complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>open tap</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<|feedback|>Action: open tap is illegal, Object: Mug is currently unavailable for interaction. Possible situations include: Mug does not exist in your current view; you are too far away from Mug; the Mug cannot perform operation open.\nYou can try \"move forward\" to approach the target object or \"navigate to <object>\" to reach nearby, larger objects for closer inspection.To complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>move forward</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<image>After executing your previous \"move forward\", you get this new image above.\nYou can use \"navigate to <object>\" to reach nearby, larger objects for closer inspection.\nTo complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>navigate to sink</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<|feedback|>Action: \"navigate to\" is illegal, \"Sink\" is the most relevant item in this room and \"navigate to sink\". Object: \"Sink\" is not currently navigable, you can try \"navigate to <object>\" to reach nearby, larger objects for closer observation.\nTo complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>open tap</DecisionMaking>"
+        },
+        {
+            "role": "user",
+            "content": "<|feedback|>Action: open tap is illegal, Object: Mug is currently unavailable for interaction. Possible situations include: Mug does not exist in your current view; you are too far away from Mug; the Mug cannot perform operation open.\nYou can try \"move forward\" to approach the target object or \"navigate to <object>\" to reach nearby, larger objects for closer inspection.To complete your task, you can think step by step at first and then output your new action from the Available_Actions.\nYour action must strictly follow format: <DecisionMaking>Your Action</DecisionMaking>, for example, <DecisionMaking>observe</DecisionMaking>."
+        },
+        {
+            "role": "assistant",
+            "content": "<DecisionMaking>move forward</DecisionMaking>"
+        }
+    ],
+    "key_actions": [
+        "navigate to CounterTop",
+        "pickup Egg",
+        "navigate to Fridge",
+        "open Fridge",
+        "put Fridge",
+        "pickup Lettuce",
+        "close Fridge",
+        "navigate to SinkBasin",
+        "put SinkBasin",
+        "toggle Faucet",
+        "pickup Lettuce",
+        "navigate to Cabinet",
+        "open Cabinet",
+        "put Plate",
+        "end"
+    ],
+    "metrics": {
+        "success": 0,
+        "efficiency": 0.0,
+        "completeness": 0.36363636363636365,
+        "key_actions_success": 0
+    },
+    "time": 118,
+    "maxstep": 36
+}

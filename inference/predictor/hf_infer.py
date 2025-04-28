@@ -17,6 +17,7 @@ class HfServer(BaseServer):
     
     def __init__(self, model_type="qwen2_5_vl", model_path="Qwen/Qwen2.5-VL-3B-Instruct"):
         self.model_path = model_path
+        print(model_path)
         self.model_type = model_type
         self.model_example_map = {
             # "qwen_vl_chat": VllmServer.load_qwen_vl_chat,
@@ -29,12 +30,15 @@ class HfServer(BaseServer):
     def load_qwen2_5_vl(model_path):
         model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
             model_path, 
+            local_files_only=True,
             attn_implementation="flash_attention_2",
             torch_dtype=torch.bfloat16, # 'auto'
             device_map="auto"
         )# .eval()
-
-        processor = AutoProcessor.from_pretrained(model_path)
+        # 显式加载状态字典
+        # state_dict = torch.load(f"{model_path}/pytorch_model.bin", map_location="cpu")
+        # model.load_state_dict(state_dict, assign=True)  # 关键修改
+        processor = AutoProcessor.from_pretrained(model_path,local_files_only=True)
         # The default range for the number of visual tokens per image in the model is 4-16384.
         # You can set min_pixels and max_pixels according to your needs, such as a token range of 256-1280, to balance performance and cost.
         # min_pixels = 256*28*28
@@ -47,6 +51,7 @@ class HfServer(BaseServer):
         # default: Load the model on the available device(s)
         model = Qwen2VLForConditionalGeneration.from_pretrained(
             model_path, 
+            local_files_only=True,
             torch_dtype=torch.bfloat16, # "auto", 
             device_map="auto",
             attn_implementation="flash_attention_2", # 节约内存

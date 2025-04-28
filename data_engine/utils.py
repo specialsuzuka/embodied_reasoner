@@ -4,6 +4,7 @@ import os
 from PIL import Image 
 import numpy as np
 from ai2thor.controller import Controller
+from ai2thor.platform import CloudRendering
 import math
 import shutil
 
@@ -92,6 +93,7 @@ def get_scene_metadata(scene,base_path):
         width=1024,
         height=1024,
         fieldOfView=145,
+        platform=CloudRendering
     )
     metadata=controller.last_event.metadata
     save_data_to_json(metadata,base_path)
